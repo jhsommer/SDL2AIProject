@@ -18,7 +18,11 @@ add_executable(SDL2AIProject main.cpp
         CActor.cpp
         CActor.h
         CTarget.cpp
-        CTarget.h)
+        CTarget.h
+        CCollider2D.cpp
+        CCollider2D.h
+        ICollider2D.cpp
+        ICollider2D.h)
 target_include_directories(SDL2AIProject PRIVATE ${SDL2_INCLUDE_DIR})
 
 #link to the SDL2 library

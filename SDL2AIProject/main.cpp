@@ -26,8 +26,8 @@ int main(int argc, char* argv[])
                 SDL_Event event;
                 SDL_SetRenderDrawColor(renderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
                 SDL_RenderClear(renderer);
-                SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
 
+                SDL_SetRenderDrawColor(renderer, 255, 255, 255, SDL_ALPHA_OPAQUE);
                 for (std::vector<CActor*>::iterator it = actors.begin(); it != actors.end(); it++) {
                     (*it)->Render(*renderer);
                 }

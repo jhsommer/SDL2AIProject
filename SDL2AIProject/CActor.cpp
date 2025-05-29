@@ -6,6 +6,7 @@
 
 CActor::CActor(const CVector2 &Position, const std::vector<CVector2> &Edges, const float Heading) : _Position(Position), _Edges(Edges), _Heading(Heading)
 {
+
 }
 
 CActor::~CActor()
@@ -18,6 +19,8 @@ void CActor::Update(float DeltaTime)
 
 void CActor::Render(SDL_Renderer &_Renderer) const
 {
+    SDL_SetRenderDrawColor(&_Renderer, 255, 255, 255, 255);
+
     std::vector<CVector2> RotadedEdges;
     for(auto Copy : _Edges)
     {
@@ -35,4 +38,9 @@ void CActor::Render(SDL_Renderer &_Renderer) const
 
         SDL_RenderDrawLine(&_Renderer, From.x, From.y, To.x, To.y);
     }
+
 }
+
+
+
+

@@ -7,17 +7,21 @@
 #include <vector>
 #include <SDL2/SDL_render.h>
 
+#include "CCollider2D.h"
 #include "CVector2.h"
 
 
 class CActor {
+    friend class CCollider2D;
 
     public:
     CActor(const CVector2& Position, const std::vector<CVector2>& Edges, const float Heading);
     virtual ~CActor();
 
     virtual void Update(float DeltaTime);
-    void Render(SDL_Renderer& _Renderer) const;
+    virtual void Render(SDL_Renderer& _Renderer) const;
+
+    //virtual CCollider2D& GetCollider() = 0;
 
     protected:
     CVector2 _Position;
@@ -25,6 +29,7 @@ class CActor {
 
     private:
     std::vector<CVector2> _Edges;
+
 
 };
 
