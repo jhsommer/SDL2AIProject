@@ -16,6 +16,8 @@ public:
 
     float x, y;
 
+
+    float GetDistance(const CVector2& other)const;
     void Rotate(float Angle);
     float GetHeading() const;
 };

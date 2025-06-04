@@ -4,7 +4,7 @@
 
 #include "CTarget.h"
 
-CTarget::CTarget() : CActor(CVector2(rand()%640, rand()&480),
+CTarget::CTarget() : CActor(CVector2(rand()%640, rand()%480),
                             {CVector2(-2, -2), CVector2(-2, 2), CVector2(2, 2), CVector2(2, -2)}, 0.f),
                      TargetColliderDimensions({22, 22})
 {

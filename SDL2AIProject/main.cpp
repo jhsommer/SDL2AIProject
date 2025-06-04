@@ -24,7 +24,7 @@ int main(int argc, char* argv[])
     actors.push_back(InitialCharacter);
     AIController->SetControlledCharacter(InitialCharacter);
 
-    for(int i = 0; i < 15; i++)
+    for(int i = 0; i < 20; i++)
     {targets.push_back(new CTarget());}
 
     if (SDL_Init(SDL_INIT_VIDEO) == 0) {

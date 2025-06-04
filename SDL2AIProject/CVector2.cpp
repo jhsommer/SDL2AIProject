@@ -18,6 +18,14 @@ CVector2::CVector2(float AngleDeg) {
     y = sin(AngleRad);
 }
 
+float CVector2::GetDistance(const CVector2 &other) const
+{
+    float DeltaX = x - other.x;
+    float DeltaY = y - other.y;
+
+    return sqrt(DeltaX * DeltaX + DeltaY * DeltaY);
+}
+
 void CVector2::Rotate(float Angle) {
     float AngleRad = Angle * pi / 180.f;
     float NewX = cos(AngleRad) * x - sin(AngleRad) * y;

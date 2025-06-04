@@ -27,8 +27,13 @@ class CAIController
     private:
     std::vector<CTarget*> TargetsInOrder;
     void GoToTarget(CTarget* _Target) const;
-};
 
+    bool bInit = false;
+
+    void GoToRandomPosition();
+    CVector2 DirectionToNextPoint;
+    bool bHasPoint = false;
+};
 
 
 #endif //CAICONTROLLER_H

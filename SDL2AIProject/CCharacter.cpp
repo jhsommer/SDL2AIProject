@@ -47,6 +47,16 @@ void CCharacter::Update(float DeltaTime)
 
     _Position += (Velocity * DeltaTime);
     _Heading += (RotationRate * DeltaTime);
+
+    if( _Position.x >= 640)
+    {
+        _Position.x = 640;
+    }
+
+    if(_Position.y >= 480)
+    {
+        _Position.y = 480;
+    }
 }
 
 void CCharacter::SetController(CAIController* Controller)
