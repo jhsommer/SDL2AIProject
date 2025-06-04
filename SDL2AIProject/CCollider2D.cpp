@@ -4,16 +4,19 @@
 
 #include "CCollider2D.h"
 
-CCollider2D::CCollider2D() {
+CCollider2D::CCollider2D()
+{
     m_Collider = new SDL_Rect;
+
     m_Collider->x = 0;
     m_Collider->y = 0;
     m_Collider->w = 0;
     m_Collider->h = 0;
 }
 
-CCollider2D::~CCollider2D() {
- delete m_Collider;
+CCollider2D::~CCollider2D()
+{
+    delete m_Collider;
 }
 
 SDL_Rect & CCollider2D::GetBoundingBox() {

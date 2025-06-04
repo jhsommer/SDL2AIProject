@@ -20,8 +20,10 @@ class CActor {
 
     virtual void Update(float DeltaTime);
     virtual void Render(SDL_Renderer& _Renderer) const;
+    CVector2 GetPosition() const;
 
-    //virtual CCollider2D& GetCollider() = 0;
+
+
 
     protected:
     CVector2 _Position;
@@ -29,6 +31,7 @@ class CActor {
 
     private:
     std::vector<CVector2> _Edges;
+
 
 
 };

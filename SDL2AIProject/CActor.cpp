@@ -41,6 +41,10 @@ void CActor::Render(SDL_Renderer &_Renderer) const
 
 }
 
+CVector2 CActor::GetPosition() const {
+    return _Position;
+}
+
 
 
 

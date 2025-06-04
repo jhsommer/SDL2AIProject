@@ -7,8 +7,10 @@
 #include <SDL2/SDL_rect.h>
 #include <SDL2/SDL_stdinc.h>
 
+#include "CActor.h"
 #include "CVector2.h"
 
+class CActor;
 
 class CCollider2D {
     public:
@@ -25,6 +27,7 @@ class CCollider2D {
 
     void SetPosition (const CVector2 &pos, const CVector2 &offset);
     void SetDimension (const CVector2 &dim);
+    CActor* GetParent() const;
 
     private:
     SDL_Rect* m_Collider;

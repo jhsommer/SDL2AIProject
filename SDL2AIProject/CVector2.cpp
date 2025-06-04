@@ -27,6 +27,12 @@ void CVector2::Rotate(float Angle) {
     y = NewY;
 }
 
+float CVector2::GetHeading() const {
+   float DegRad = atan2(y, x);
+    float AngleRad = 180.f * DegRad  / pi ;
+    return AngleRad;
+}
+
 CVector2 operator+(const CVector2 &v1, const CVector2 &v2)
 {
     return (CVector2(v1.x + v2.x, v1.y + v2.y));
@@ -36,4 +42,17 @@ CVector2 operator-(const CVector2 &v1, const CVector2 &v2) {
 
     return (CVector2(v1.x - v2.x, v1.y - v2.y));
 }
+
+CVector2 operator*(const CVector2 &V1, const float Scalar) {
+
+    return (CVector2(V1.x * Scalar, V1.y * Scalar));
+}
+
+void operator+=(CVector2 &v1, const CVector2 &v2)
+{
+    v1.x += v2.x;
+    v1.y += v2.y;
+}
+
+
 

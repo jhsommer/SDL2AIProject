@@ -17,9 +17,12 @@ public:
     float x, y;
 
     void Rotate(float Angle);
+    float GetHeading() const;
 };
 
 CVector2 operator+ (const CVector2 &v1, const CVector2 &v2);
 CVector2 operator- (const CVector2 &v1, const CVector2 &v2);
+CVector2 operator* (const CVector2 &V1, const float Scalar);
+void operator += (CVector2 &v1, const CVector2 &v2);
 
 #endif //CVECTOR2_H

@@ -11,6 +11,7 @@ class ICollider2D {
     public:
         virtual ~ICollider2D()= default;
         virtual CCollider2D& GetCollider() = 0;
+        virtual CCollider2D& GetPickUpCollider() = 0;
 };
 
 

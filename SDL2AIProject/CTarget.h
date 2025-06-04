@@ -12,11 +12,16 @@ class CTarget : public CActor, ICollider2D
 {
 public:
     CTarget();
+    ~CTarget();
     void Render(SDL_Renderer &_Renderer) const override;
+
     CCollider2D& GetCollider() override;
+    CCollider2D& GetPickUpCollider() override;
 
 private:
     CCollider2D* Collider2D;
+    CCollider2D* PickUpCollider;
+    CVector2 TargetColliderDimensions;
 };
 
 
